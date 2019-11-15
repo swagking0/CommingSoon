@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Swagking0 | ComingSoon</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="favicon_io/site.webmanifest">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/csmain.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	
+	<div class="size1 bg0 where1-parent">
+		<!-- Coutdown -->
+		<div class="flex-c-m bg-img1 size2 where1 overlay1 where2 respon2">
+			<div class="wsize2 flex-w flex-c-m cd100 js-tilt">
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span id="days" class="l2-txt1 p-b-9 days">Na</span>
+					<span class="s2-txt4">Days</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span id="hours" class="l2-txt1 p-b-9 hours">Na</span>
+					<span class="s2-txt4">Hours</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span id="minutes" class="l2-txt1 p-b-9 minutes">Na</span>
+					<span class="s2-txt4">Minutes</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span id="seconds" class="l2-txt1 p-b-9 seconds">Na</span>
+					<span class="s2-txt4">Seconds</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Form -->
+		<div class="size3 flex-col-sb flex-w p-l-75 p-r-75 p-t-45 p-b-45 respon1">
+			<div class="wrap-pic1">
+			</div>
+
+			<div class="p-t-50 p-b-60">
+				<p class="m1-txt1 p-b-36">
+					Website under development <span class="m1-txt2">Coming Soon</span> !
+				</p>
+				<button data-ty type="button" class="btn btn-lg buttonDown" onclick="window.location.href = '../';">Home</button>
+			</div>
+
+			<div class="flex-w">
+				<div>© 2019 Copyright
+					<a href="./comingsoon" style="color:orange;">Swagking0</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/moment.min.js"></script>
+	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
+	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script>
+		// set date or deadline
+		var countDownDate = new Date("Dec 25, 2019 16:37:25").getTime();
+		var countdownfunction = setInterval(function() {
+			// get present date
+			var now = new Date().getTime();
+			// distance between present and given date
+			var distance = countDownDate - now;
+			// calculations area
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			// outputing the calculations
+			document.getElementById("days").innerHTML = days;
+			document.getElementById("hours").innerHTML = hours;
+			document.getElementById("minutes").innerHTML = minutes;
+			document.getElementById("seconds").innerHTML = seconds;
+			// end to count
+			if (distance < 0){
+				clearInterval(countdownfunction);
+				document.getElementById("days").innerHTML = "Na";
+				document.getElementById("hours").innerHTML = "Na";
+				document.getElementById("minutes").innerHTML = "Na";
+				document.getElementById("seconds").innerHTML = "Na";
+			}
+		}, 1000);
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/csmain.js"></script>
+
+</body>
+</html>
